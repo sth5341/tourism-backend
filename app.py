@@ -7,7 +7,7 @@ from flask_jwt_extended import JWTManager
 app = Flask(__name__)
 
 # Configure CORS for specific domains
-CORS(app, resources={r"/api/*": {"origins": os.getenv('WECHAT_DOMAIN', 'your-mini-program-domain')}})
+CORS(app, resources={r"/api/*": {"origins": os.getenv('WECHAT_DOMAIN', 'https://tourism-backend-z2z4.onrender.com')}})
 
 # Configure JWT
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your-secret-key')  # Use environment variable for security
